@@ -1,0 +1,10 @@
+== README
+
+This is a template for , mainly Active Record, mapping the
+tables and DB links in GemDB as models.
+
+What does it include
+
+1. OCI-8 / Oracle Enhanced gem - This is a driver for rails to connect to Oracle DB
+2. Bugdb is a dblink.
+3. bugbd's rptehad is a synonym called rpthead

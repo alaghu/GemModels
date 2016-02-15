@@ -21,7 +21,6 @@ class Rpthead < ActiveRecord::Base
   # Connecting through dblink to bug.
   # rpthead, is a table in bug, which is a synonym
   self.table_name = 'rpthead'
-
   # Mapping Primary key
   self.primary_key = 'rptno'
 
@@ -29,7 +28,8 @@ class Rpthead < ActiveRecord::Base
   # ----------------------
   # in sqlplus
   # >desc BUG.rpthead
-  # not sure why it needs BUG.rpthead
+  # not sure why it needs BUG.rpthead though rpthead is a
+  # synonym.
 
   # Ignoring columns
   # ----------------------

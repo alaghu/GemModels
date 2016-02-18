@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'bug/index'
+  get 'dr_env/index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

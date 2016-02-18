@@ -23,6 +23,8 @@ ActiveSupport.on_load(:active_record) do
     # oracle queries work with GemDB.
     OCI8::BindType::Mapping[Time] = OCI8::BindType::LocalTime
     OCI8::BindType::Mapping[:date] = OCI8::BindType::LocalTime
+    OCI8::BindType::Mapping[:timestamp] = OCI8::BindType::UTCTime
+    OCI8::BindType::Mapping[:timestamp_ltz] = OCI8::BindType::UTCTime
 
 
   end

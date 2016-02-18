@@ -1,0 +1,15 @@
+<h1>DrEnv#index</h1>
+<p>Find me in app/views/dr_env/index.html.erb</p>
+
+<!--TODO: create the attributes as a header-->
+<!--Template for displaying all fields and its values.-->
+<!--Iterating through every instance of the Object-->
+<% @DrEnv.each do |drenv| %>
+    <!--Iterating through the objects attributes-->
+    <% drenv.attribute_names.each do |attribute| %>
+        <!--Displaying the attribute-->
+        <p><%= attribute %></p>
+        <!--Displaying the attribute value-->
+        <%= drenv.attributes[attribute] %>
+    <% end %>
+<% end %>

@@ -1,15 +1,37 @@
 <h1>DrEnv#index</h1>
-<p>Find me in app/views/dr_env/index.html.erb</p>
-
 <!--TODO: create the attributes as a header-->
 <!--Template for displaying all fields and its values.-->
 <!--Iterating through every instance of the Object-->
-<% @DrEnv.each do |drenv| %>
-    <!--Iterating through the objects attributes-->
-    <% drenv.attribute_names.each do |attribute| %>
-        <!--Displaying the attribute-->
-        <p><%= attribute %></p>
-        <!--Displaying the attribute value-->
-        <%= drenv.attributes[attribute] %>
+<section class="panel">
+  <header class="panel-heading">
+    <span class="label bg-danger pull-right">4 left</span>
+    Find me in app/views/dr_env/index.html.erb
+  </header>
+  <table class="table table-striped m-b-none text-sm">
+    <thead>
+    <tr>
+      <% @DrEnv.each do |drenv| %>
+          <% drenv.attribute_names.each do |attribute| %>
+              <!--Displaying the attribute-->
+              <th><%= attribute %></th>
+          <% end %>
+      <% end %>
+    </tr>
+    </thead>
+    <tbody>
+    <% @DrEnv.each do |drenv| %>
+        <!--Iterating through the objects attributes-->
+        <% drenv.attribute_names.each do |attribute| %>
+            <!--Displaying the attribute-->
+
+              <!--<td><%= attribute %></td>-->
+
+            <!--Displaying the attribute value-->
+            <tr><td><%= drenv.attributes[attribute] %></td></tr>
+        <% end %>
     <% end %>
-<% end %>
+    </tbody>
+  </table>
+</section>
+
+

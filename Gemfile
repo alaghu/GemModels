@@ -8,7 +8,7 @@ gem 'rails', '4.2.5'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.4'
-gem 'bootstrap-sass', '3.3.5'
+gem 'bootstrap-sass', '3.3.6'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.7.2'

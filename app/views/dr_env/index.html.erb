@@ -1,13 +1,13 @@
 <h1>DrEnv#index</h1>
-<!--TODO: create the attributes as a header-->
+<h2>Find me in app/views/dr_env/index.html.erb</h2>
 <!--Template for displaying all fields and its values.-->
 <!--Iterating through every instance of the Object-->
-<section class="panel">
-  <header class="panel-heading">
-    <span class="label bg-danger pull-right">4 left</span>
-    Find me in app/views/dr_env/index.html.erb
-  </header>
-  <table class="table table-striped m-b-none text-sm">
+<div class="sticky-wrap">
+  <!--From what I can understand,  there are three sets of tables for sticky to -->
+  <!--work -->
+  <!--First Set-->
+  <table class="sticky-enabled">
+    <!--TODO: optimize iterating the object twice-->
     <thead>
     <tr>
       <% @DrEnv.each do |drenv| %>
@@ -21,17 +21,36 @@
     <tbody>
     <% @DrEnv.each do |drenv| %>
         <!--Iterating through the objects attributes-->
-        <% drenv.attribute_names.each do |attribute| %>
-            <!--Displaying the attribute-->
-
-              <!--<td><%= attribute %></td>-->
-
-            <!--Displaying the attribute value-->
-            <tr><td><%= drenv.attributes[attribute] %></td></tr>
-        <% end %>
+        <tr>
+          <% drenv.attribute_names.each do |attribute| %>
+              <!--Displaying the attribute value-->
+              <td><%= drenv.attributes[attribute] %>
+              </td>
+          <% end %>
+        </tr>
     <% end %>
     </tbody>
   </table>
-</section>
+  <!--Second Set-->
+  <table class="sticky-intersect">
+    <thead>
+    <tr>
+      <th>Hello</th>
+    </tr>
+    </thead>
+  </table>
+  <!--Third Set-->
+  <table class="sticky-thead">
+    <thead>
+    <tr>
+      <% @DrEnv.each do |drenv| %>
+          <% drenv.attribute_names.each do |attribute| %>
+              <!--Displaying the attribute-->
+              <th><%= attribute %></th>
+          <% end %>
+      <% end %>
+    </tr>
+    </thead>
+  </table>
 
-
+</div>

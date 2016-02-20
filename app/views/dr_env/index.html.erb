@@ -2,16 +2,20 @@
 <h2>Find me in app/views/dr_env/index.html.erb</h2>
 <!--Template for displaying all fields and its values.-->
 <!--Iterating through every instance of the Object-->
+
+<!--Count of records-->
+<p><%= @DrEnv.count %> records</p>
 <div>
   <table>
     <!--TODO: optimize iterating the object twice-->
     <thead>
     <tr>
-      <% @DrEnv.each do |drenv| %>
-          <% drenv.attribute_names.each do |attribute| %>
-              <!--Displaying the attribute-->
-              <th><%= attribute %></th>
-          <% end %>
+      <!--Getting the list of attributes for only one record
+      to display the attributes as header-->
+      <% first =@DrEnv.first %>
+      <% first.attribute_names.each do |attribute| %>
+          <!--Displaying the attribute-->
+          <th><%= attribute.capitalize %></th>
       <% end %>
     </tr>
     </thead>

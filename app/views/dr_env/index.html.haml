@@ -1,0 +1,17 @@
+%h1 DrEnv#index
+%h2 Find me in app/views/dr_env/index.html.haml
+%p= "#{@DrEnv.count} records"
+
+%div
+  %table
+    %thead
+    %tr
+      - first =@DrEnv.first
+        - first.attribute_names.each do |attribute|
+        %th= attribute.capitalize
+
+    %tbody
+      - @DrEnv.each do |record|
+        %tr
+          - record.attribute_names.each do |attribute|
+            %td= record.attributes[attribute]

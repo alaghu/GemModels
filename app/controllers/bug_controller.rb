@@ -13,12 +13,12 @@ class BugController < ApplicationController
     # (880.0ms)  SELECT DECODE(table_name, UPPER(table_name), LOWER(table_name), table_name) FROM all_tables WHERE owner = SYS_CONTEXT('userenv', 'session_user') AND secondary = 'N'
     # Sequence (613.2ms)  select us.sequence_name from all_sequences@BUG.US.ORACLE.COM us where us.sequence_owner = 'BUG' and us.sequence_name = 'RPTHEAD_SEQ'
     # Primary Key (1843.0ms)  SELECT cc.column_name FROM all_constraints@BUG.US.ORACLE.COM c, all_cons_columns@BUG.US.ORACLE.COM cc WHERE c.owner = 'BUG' AND c.table_name = 'RPTHEAD' AND c.constraint_type = 'P' AND cc.owner = c.owner AND cc.constraint_name = c.constraint_name
-    # Rendered bug/index.html.erb within layouts/application (0.8ms)
+    # Rendered bug/index.html.haml within layouts/application (0.8ms)
     # Completed 200 OK in 33581ms (Views: 385.3ms | ActiveRecord: 30364.5ms)
 
     ## normal page load
       # Rpthead Load (306.2ms)  SELECT  "RPTHEAD".* FROM "RPTHEAD" WHERE "RPTHEAD"."RPTNO" = :a1 AND ROWNUM <= 1   [["rptno", 20129254]]
-    # Rendered bug/index.html.erb within layouts/application (0.1ms)
+    # Rendered bug/index.html.haml within layouts/application (0.1ms)
     # Completed 200 OK in 319ms (Views: 11.7ms | ActiveRecord: 306.2ms)
 
 

@@ -1,0 +1,17 @@
+%h1 Bug#index
+%h2 Find me in app/views/bug/index.html.erb
+%p= "#{@pim_bugs.count} records"
+
+%div
+  %table
+    %thead
+      %tr
+        - first =@pim_bugs.first
+          - first.attribute_names.each do |attribute|
+          %th= attribute.capitalize
+
+    %tbody
+      - @pim_bugs.each do |record|
+        %tr
+        - record.attribute_names.each do |attribute|
+          %td= record.attributes[attribute]

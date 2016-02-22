@@ -10,6 +10,12 @@ gem 'rails', '4.2.5'
 gem 'sass-rails', '5.0.4'
 gem 'bootstrap-sass', '3.3.6'
 
+# Used in replacement of HTML.
+# http://techbus.safaribooksonline.com/book/programming/ruby/9780133487954/
+# chapter-12dot-haml/ch12_html?uicode=oracle
+# http://haml.info
+gem 'haml-rails', '0.9.0'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.7.2'
 

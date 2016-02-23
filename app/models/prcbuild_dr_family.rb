@@ -1,5 +1,5 @@
 # mapping PrcbuildDrEnv from bug as a class
-class PrcbuildDrEnv < ActiveRecord::Base
+class PrcbuildDrFamily < ActiveRecord::Base
   # Overview
   # Mapping Table to Class
   # Not a table but a Synonym (of dblink)
@@ -17,8 +17,8 @@ class PrcbuildDrEnv < ActiveRecord::Base
   # ----------------------
   # connecting though dblink to FARMJANGO
   # prcbuild_dr_env is a table in farmjango, which is a synonym
-  # create synonym PRCBUILD_DR_ENV for PRCQA.PRCBUILD_DR_ENV@FARMJANGO;
-  self.table_name = 'prcbuild_dr_env'
+  # create synonym PRCBUILD_DR_FAMILY for PRCQA.PRCBUILD_DR_FAMILY@FARMJANGO;
+  self.table_name = 'prcbuild_dr_family'
 
   # Mapping Primary key
   self.primary_key = 'id'
@@ -26,7 +26,7 @@ class PrcbuildDrEnv < ActiveRecord::Base
   # How to obtain columns names
   # ----------------------
   # in sqlplus
-  # >desc PRCQA.PRCBUILD_DR_ENV@FARMJANGO
+  # >desc PRCQA.PRCBUILD_DR_FAMILY@FARMJANGO
   # not sure why we have to provide @FARMJANGO when rpthead did not need it.
 
   # Ignoring columns
@@ -36,14 +36,13 @@ class PrcbuildDrEnv < ActiveRecord::Base
   # How to get a list and count of columns mapped to attributes
   # ----------------------
   # in Rails console
-  # > PrcbuildDrEnv.attribute_names.count
-  # 23
+  # > PrcbuildDrFamily.attribute_names.count
+  # 12
 
   # Mapping column data type to ruby types
   # ----------------------
   # Integer mapping
-  set_integer_columns :id, :env_monitor, :env_dr_objective,
-                      :env_dr_objective_required, :env_archive
+  set_integer_columns :id, :env_id, :family_monitor, :family_bug_from_qc
 
   # Date mapping
   set_datetime_columns :last_updated_date, :created_date

@@ -17,3 +17,8 @@
 /tmp
 /.idea
 .idea/*
+
+/.idea/workspace.xml
+/.idea/GemModels.iml
+/.idea/.rakeTasks
+/.idea/.generators

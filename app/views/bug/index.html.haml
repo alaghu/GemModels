@@ -1,11 +1,16 @@
-  -#haml basics
-  -#% for any tag
-  -## for id
-  -#. for class
-  -#- for ruby code
-  -#= for ruby code with output
-  -#no closure of tags
-  -#no end for do
+-#haml basics
+-#% for any tag
+-## for id
+-#. for class
+-#- for ruby code
+-#= for ruby code with output
+-#no closure of tags
+-#no end for do
+-#TODO: refactor this pattern to be in a layout
+-#TODO: take the instance variable as an input
+-#TODO: Find the method to obtain Controller#method
+-#TODO: Find the method to obtain the file name and location
+
 
 
 %h1 Bug#index
@@ -20,11 +25,12 @@
         - first =@pim_bugs.first
           -#What is the indent rule here
           - first.attribute_names.each do |attribute|
-            %th= attribute.capitalize
-     -#Table rows lists all the attributes and its values
+          %th= attribute.capitalize
+
+    -#Table rows lists all the attributes and its values
     %tbody
       - @pim_bugs.each do |record|
         %tr
-         -#What is the indent rule here
+        -#What is the indent rule here
         - record.attribute_names.each do |attribute|
           %td= record.attributes[attribute]

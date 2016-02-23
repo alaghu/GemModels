@@ -58,6 +58,20 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a
   # debugger console
   gem 'byebug', '8.2.2'
+
+  # for a better view of data in the rails console
+  gem "awesome_print", '1.6.1' , require:"ap"
+
+  # chrome extension
+  gem 'meta_request', '0.4.0'
+
+  # for better errors
+  # works on mc local browsers not on external url
+  gem "better_errors", '2.1.1'
+
+  # a cleaned up log messages
+  gem 'quiet_assets', '1.1.0'
+
 end
 # Unused Gems
 # Use ActiveModel has_secure_password

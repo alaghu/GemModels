@@ -14,12 +14,7 @@
 # Configure Using Gemfile
 # gem 'pg'
 #
-default: &default
-  adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+
 
 #development:
 #  <<: *default
@@ -59,17 +54,31 @@ default: &default
 #  <<: *default
 #  database: SampleRails_test
 
+default: &default
+  adapter: oracle_enhanced
+#  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+#  pool: 5
+
 test:
   adapter: oracle_enhanced
   database: //adc01knk.us.oracle.com:1521/gemdb.us.oracle.com
   username: system
-  password: manager
+  password: <%= ENV["GEM_DB_PWD"] %>
 
 development:
   adapter: oracle_enhanced
   database: //adc01knk.us.oracle.com:1521/gemdb.us.oracle.com
   username: system
-  password: manager
+  password: Samsung5
+
+production:
+   adapter: oracle_enhanced
+   database: //adc01knk.us.oracle.com:1521/gemdb.us.oracle.com
+   username: system
+   # view this environment variable in ~/.bash_profile
+   password: <%= ENV["GEM_DB_PWD"] %>
 
 #"(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = adc01knk.us.oracle.com)(PORT = 1521))) (CONNECT_DATA = (SERVICE_NAME = gemdb))"
 
@@ -92,8 +101,8 @@ development:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: SampleRails_production
-  username: SampleRails
-  password: <%= ENV['SAMPLERAILS_DATABASE_PASSWORD'] %>
+#production:
+#  <<: *default
+#  database: SampleRails_production
+#  username: SampleRails
+#  password: <%= ENV['SAMPLERAILS_DATABASE_PASSWORD'] %>

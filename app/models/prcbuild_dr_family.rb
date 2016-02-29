@@ -1,4 +1,4 @@
-# mapping PrcbuildDrEnv from bug as a class
+# mapping PrcbuildDrEnv from prcbuild_dr_family as a class
 class PrcbuildDrFamily < ActiveRecord::Base
   # Overview
   # Mapping Table to Class

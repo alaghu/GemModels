@@ -13,23 +13,23 @@
 
 
 
-%h1 Bug#index
-%h2 Find me in app/views/bug/index.html.erb
-%p= "#{@pim_bugs.count} records"
+%h1= "#{controller_path.capitalize} #{action_name.capitalize}"
+%h2 Find me in app/views/rpthead/index.html.erb
+%p= "#{@Rpthead.count} records"
 
 %div
   %table
     -#Table header lists all the attribute names only from the first record
     %thead
       %tr
-        - first =@pim_bugs.first
+        - first =@Rpthead.first
           -#What is the indent rule here
           - first.attribute_names.each do |attribute|
           %th= attribute.capitalize
 
     -#Table rows lists all the attributes and its values
     %tbody
-      - @pim_bugs.each do |record|
+      - @Rpthead.each do |record|
         %tr
         -#What is the indent rule here
         - record.attribute_names.each do |attribute|

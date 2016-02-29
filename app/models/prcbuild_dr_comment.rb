@@ -1,4 +1,4 @@
-# mapping PrcbuildDrComment from bug as a class
+# mapping PrcbuildDrComment from prcbuild_dr_comment as a class
 class PrcbuildDrComment < ActiveRecord::Base
   # Overview
   # Mapping Table to Class

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'bug/index'
+  get 'rpthead/index'
   get 'dr_env/index'
   get 'dr_family/index'
   get 'dr_comment/index'

@@ -1,4 +1,4 @@
-# mapping rpthead from bug as a class
+# mapping rpthead from bugdb as a class
 class Rpthead < ActiveRecord::Base
   # Overview
   # Mapping Table to Class
@@ -11,15 +11,15 @@ class Rpthead < ActiveRecord::Base
 
   # Mapping Table to Class
   # ----------------------
-  # Why Rpthead and not bug?
+  # Why Rpthead and not rpthead?
   # Since all sql queries would connect to bugdb and use rpthead,
   # it would be prudent to keep the model names in sync with table names.
   # When required, change the attributes in view.Also, can change in controller.
 
   # Not a table but a Synonym (of dblink)
   # ----------------------
-  # Connecting through dblink to bug.
-  # rpthead, is a table in bug, which is a synonym
+  # Connecting through dblink to rpthead.
+  # rpthead, is a table in rpthead, which is a synonym
   self.table_name = 'rpthead'
   # Mapping Primary key
   self.primary_key = 'rptno'

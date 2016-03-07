@@ -1,5 +1,12 @@
-== Exporting Schema and Data from FarmJango
+== Exporting Schema and Data from FarmJango. Importin to GEMDB_TEST
 
+The reason we have to perform these steps is because database copy failed with
+insufficient priveleges in sqldeveloper.Thus a manual work around of a.
+exporting the DDL, b. Transforming the DLL for the source GEMDB_TEST and c.
+Importing the data GEMDB_TEST.
+
+Export DDL and Data from Farmjano through SQL Developer
+-------------------------------------------------------
 Open SQL Developer
 Connect to FarmJango using FJ_Readonly (
 Open "Other Users"
@@ -7,8 +14,9 @@ Open "PRCQA" > Tables
 Each Table > Export
 
 For each Table there are two exports
-1. Export DDL (Table Definition) (tablename.sql)
-2. Export Data (tablenamae_Data.csv)
+1. Export DDL (Table Definition) (tablename.sql).
+2. Export Data (tablename_Data.csv).In some cases due to the large volume of
+data, only a certain subset (typically by last_updated_date range is exported)
 
 
 Export DDL (Table Definition)

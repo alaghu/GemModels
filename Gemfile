@@ -59,12 +59,31 @@ group :development, :test do
   # debugger console
   gem 'byebug', '8.2.2'
 end
-# Unused Gems
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+# Adding the relevant Gems for testing
+group :test do
+  # This is the rspec testing framework which provides a expressive
+  # way to write tests.
+  gem 'rspec-rails', '3.3.3'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+  # Capybara provides DSL for browser based testing. Thus providing commands
+  # like click , visit, etc. Easy to understand actions as users would navidate.
+  gem 'capybara', '2.5.0'
+
+  # Poltergeist replaces webkit as the javascript driver for Capybara
+  # See /spec/rails_helper.rb for its reference.
+  gem 'poltergeist', '1.8.1'
+
+  # a better
+  gem 'pry-rails', '0.3.2'
+
+  # Code coverage by codeclimate
+  gem 'codeclimate-test-reporter', '0.4.8', require: nil
+
+  # https://www.pullreview.com/settings/repositories/54091/
+  # how_to_enable_coverage
+  gem 'pullreview-coverage', '0.0.5', require: false
+
+  # https://coveralls.io/github/alaghu/learn_jquery
+  gem 'coveralls', '0.8.3', require: false
+end

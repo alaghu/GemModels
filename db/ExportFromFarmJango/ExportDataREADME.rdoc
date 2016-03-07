@@ -1,0 +1,27 @@
+== Exporting Schema and Data from FarmJango
+
+Open SQL Developer
+Connect to FarmJango using FJ_Readonly (
+Open "Other Users"
+Open "PRCQA" > Tables
+Each Table > Export
+
+For each Table there are two exports
+1. Export DDL (Table Definition) (tablename.sql)
+2. Export Data (tablenamae_Data.csv)
+
+
+Export DDL (Table Definition)
+-----------
+Export the DDL to db/ExportFromFarmJango/Tablename
+From the tablename.sql extract/selct only the lines for CREATE TABLE
+Replace PRCQA with GEMDB_TEST
+(Import) Add that statement to CreateTablesInGEMDB_TEST
+Run  this in SQLDeveloper in GEMDB_TEST.
+Check to see the table has been created in GemDB_TEST.
+
+Export Data
+-------------
+Export it to CSV as tablename_Data.csv to  db/ExportFromFarmJango/Tablename
+(Import) into table through this csv in SQLDeveloper in GEMDB_TEST
+

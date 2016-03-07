@@ -69,7 +69,7 @@ development:
   adapter: oracle_enhanced
   database: //adc01knk.us.oracle.com:1521/gemdb.us.oracle.com
   username: system
-  password: manager
+  password: Samsung5
 
 #"(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = adc01knk.us.oracle.com)(PORT = 1521))) (CONNECT_DATA = (SERVICE_NAME = gemdb))"
 
